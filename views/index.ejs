@@ -1,0 +1,10 @@
+<h2>The Original 151 Pokemon</h2>
+    <% pokemons.forEach(pokemon => {%>
+        <div class="og-border">
+            <h3><%= pokemon.name %></h3>
+            <form method="POST" action="/pokemons">
+                <input type="hidden" name="name" value="<%= pokemon.name %>">
+                <input type="submit" value="add to favorites">
+            </form>
+        </div>
+    <% }) %>
